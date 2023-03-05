@@ -1,4 +1,12 @@
 var text = document.querySelector('h2');
+//adding custom cursor object
+let span =document.createElement('span');
+window.onmouseover=(e)=>{
+    span.classList.add('cursor');
+    span.style.top = `${e.clientY}px`;
+    span.style.left =`${e.clientX}px`;
+}
+document.body.appendChild(span)
 text.onmouseover=(e)=>{
     //letters to iterate through
     let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
